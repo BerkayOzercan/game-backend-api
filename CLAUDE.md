@@ -233,21 +233,21 @@ alembic revision --autogenerate -m "describe change"
 
 ## Build Order
 
-1. [ ] Folder structure + venv + dependencies installed
-2. [ ] `app/config.py` + `.env` setup
-3. [ ] `app/database.py` — DB connection
-4. [ ] `app/models/player.py` — Player model
-5. [ ] `app/schemas/player.py` — Pydantic schemas
-6. [ ] `app/services/auth.py` — password hashing + JWT logic
-7. [ ] `app/routers/auth.py` — register + login + /me
-8. [ ] `app/dependencies.py` — `get_current_player`
-9. [ ] Alembic setup + first migration
-10. [ ] `app/models/score.py` + score submission endpoint
-11. [ ] `app/models/session.py` + session start/end endpoints
-12. [ ] `app/routers/leaderboard.py` — global + personal leaderboard
+1. [x] Folder structure + venv + dependencies installed
+2. [x] `app/config.py` + `.env` setup
+3. [x] `app/database.py` — DB connection
+4. [x] `app/models/player.py` — Player model
+5. [x] `app/schemas/player.py` — Pydantic schemas
+6. [x] `app/services/auth.py` — password hashing + JWT logic
+7. [x] `app/routers/auth.py` — register + login + /me
+8. [x] `app/dependencies.py` — `get_current_player`
+9. [x] Alembic setup + first migration
+10. [x] `app/models/score.py` + score submission endpoint
+11. [x] `app/models/session.py` + session start/end endpoints
+12. [x] `app/routers/leaderboard.py` — global + personal leaderboard
 13. [ ] Test full flow end-to-end in Swagger UI
 14. [ ] Godot HTTPRequest integration (GameAPI.gd autoload)
-15. [ ] README.md with setup instructions + endpoint reference
+15. [x] README.md with setup instructions + endpoint reference
 
 ---
 

@@ -1,9 +1,9 @@
 
-![Regal Rust](src/thumbnail.png)
+![Game Backend](src/thumbnail.png)
 
-# Regal Rust — Game Backend API
+# FastAPI Game Backend
 
-REST API backend for **Regal Rust**, a solo indie 3D physics-based medieval weapon game built in Godot 4.
+REST API backend for a 3D physics-based medieval weapon game built in Godot 4.
 
 Handles player authentication, persistent leaderboard data, and game session tracking. Designed to be called directly from the Godot 4 client via `HTTPRequest` nodes.
 
@@ -41,7 +41,7 @@ cp .env.example .env
 Edit `.env` with your values:
 
 ```env
-DATABASE_URL=postgresql://postgres:password@localhost:5432/regalrust
+DATABASE_URL=postgresql://postgres:password@localhost:5432/gamebackend
 SECRET_KEY=your-secret-key-here
 ALGORITHM=HS256
 ACCESS_TOKEN_EXPIRE_MINUTES=1440
@@ -56,7 +56,7 @@ python -c "import secrets; print(secrets.token_hex(32))"
 ### 3. Create the database
 
 ```sql
-CREATE DATABASE regalrust;
+CREATE DATABASE gamebackend;
 ```
 
 ### 4. Run migrations
@@ -185,7 +185,7 @@ http_request.request(GameAPI.base_url + "/leaderboard", headers, HTTPClient.METH
 ## Project Structure
 
 ```
-regal-rust-backend/
+fastapi-game-backend/
 ├── app/
 │   ├── main.py              # FastAPI app entry point
 │   ├── config.py            # Settings from .env
