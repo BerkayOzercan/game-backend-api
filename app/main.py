@@ -1,6 +1,7 @@
 from fastapi import FastAPI
+from fastapi.staticfiles import StaticFiles
 
-from app.routers import auth, leaderboard, sessions
+from app.routers import auth, leaderboard, sessions, admin
 
 app = FastAPI(
     title="FastAPI Game Backend",
@@ -14,6 +15,9 @@ app = FastAPI(
 app.include_router(auth.router)
 app.include_router(leaderboard.router)
 app.include_router(sessions.router)
+app.include_router(admin.router)
+
+app.mount("/dashboard", StaticFiles(directory="app/static", html=True), name="dashboard")
 
 
 @app.get("/", tags=["Health"])
